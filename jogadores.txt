@@ -1,22 +1,4 @@
-bi ava,1
-benis,0
-c++,1
-denis,1
-teste2,0
-biavanaogay,0
-teste1,0
-kkk,0
-oiuy,0
-kjhg,0
-biavagay,1
-joadn,0
-javadoc,0
-kkkk,0
-biava,0
-aefgshj,1
-vn,1
-fsgd,0
-aojogfnd,0
-pl,0
-aesgxfnnnnn,0
-rrhjf,0
+jaba,0
+juba,0
+fagsfhgd,0
+afgsfgd,1

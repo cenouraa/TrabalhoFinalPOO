@@ -13,12 +13,13 @@ public class GameMenu {
         boolean gameStatus = true;
 
         while(gameStatus) {
+            Console.clearScreen();
             printMenu();
 
             System.out.print("Escolha uma opção: ");
             try {
                 escolha = Console.lerInt();
-                if (escolha == 1 || escolha == 2 || escolha == 0) {
+                if (escolha == 1 || escolha == 2) {
                     gameStatus = false;
                 } else {
                     Console.clearScreen();
@@ -28,7 +29,6 @@ public class GameMenu {
                 System.out.println(e.getMessage());
             }
         }
-        Console.clearScreen();
         return escolha;
     }
 
@@ -36,6 +36,5 @@ public class GameMenu {
         System.out.println("Escolha o modo de jogo:");
         System.out.println("1. Modo Clássico");
         System.out.println("2. Modo Especial");
-        System.out.println("0. Sair");
     }
 }

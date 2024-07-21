@@ -1,9 +1,5 @@
 package entradados;
 
-import jogodavelha.Jogada;
-import jogodavelha.Jogador;
-import jogodavelha.Tabuleiro;
-
 import java.util.Scanner;
 
 /** classe para entrar dados do terminal */
@@ -49,6 +45,13 @@ public class Console {
     public static String lerNome(String mensagem) {
         System.out.print(mensagem);
         return scanner.nextLine();
+    }
+
+    public static boolean lerBoolean(String mensagem) {
+        System.out.print(mensagem);
+        String resposta = scanner.next();
+        scanner.nextLine(); 
+        return resposta.equals("0");
     }
 
     public static void clearScreen() {

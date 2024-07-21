@@ -1,7 +1,5 @@
 package jogodavelha;
 
-import armazenamento.GerenciaJogadoresArrayList;
-
 /** classe que gerencia as jogadas */
 public class Jogador {
     private String simbolo;

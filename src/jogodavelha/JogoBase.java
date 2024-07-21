@@ -12,14 +12,11 @@ public abstract class JogoBase {
     protected Jogada jogada;
     protected GerenciaJogadores gerenciaJogadores;
 
-    public JogoBase(GerenciaJogadores gerenciaJogadores) {
+    public JogoBase(GerenciaJogadores gerenciaJogadores, String nomeJogador1, String nomeJogador2) {
         this.gerenciaJogadores = gerenciaJogadores;
         tabuleiro = new Tabuleiro();
 
-        String nomeJogador1 = Console.lerNome("Nome do jogador 1 (X): ");
         jogador1 = new Jogador("X", 1, nomeJogador1);
-
-        String nomeJogador2 = Console.lerNome("Nome do jogador 2 (O): ");
         jogador2 = new Jogador("O", 2, nomeJogador2);
 
         jogadorAtual = jogador1;
@@ -39,6 +36,7 @@ public abstract class JogoBase {
             tabuleiro.imprimeTabuleiro();
             realizarJogada(jogadorAtual);
             if (tabuleiro.verificaVitoria(jogadorAtual.getSimbolo())) {
+                Console.clearScreen();
                 tabuleiro.imprimeTabuleiro();
                 System.out.println("O jogador " + jogadorAtual.getNome() + " venceu!");
                 try {

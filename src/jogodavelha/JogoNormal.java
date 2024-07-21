@@ -5,21 +5,18 @@ import entradados.Console;
 
 public class JogoNormal extends JogoBase {
 
-    public JogoNormal(GerenciaJogadores gerenciaJogadores) {
-        super(gerenciaJogadores);
+    public JogoNormal(GerenciaJogadores gerenciaJogadores, String nomeJogador1, String nomeJogador2) {
+        super(gerenciaJogadores, nomeJogador1, nomeJogador2);
     }
 
     @Override
     protected void realizarJogada(Jogador jogador) {
         boolean jogadaValida = false;
         while (!jogadaValida) {
-            int linha = Console.lerJogada("Escolha a linha (1-3): ");
-            int coluna = Console.lerJogada("Escolha a coluna (1-3): ");
+            int linha = Console.lerJogada("Linha da jogada (1-3): ");
+            int coluna = Console.lerJogada("Coluna da jogada (1-3): ");
             try {
-                if (tabuleiro.fazerJogada(linha, coluna, jogador.getSimbolo())) {
-                    jogada = new Jogada(linha, coluna, jogador.getSimbolo());
-                    jogadaValida = true;
-                }
+                jogadaValida = tabuleiro.fazerJogada(linha, coluna, jogador.getSimbolo());
             } catch (EntradaInvalidaException | PosicaoOcupadaException e) {
                 System.out.println(e.getMessage());
             }
