@@ -37,7 +37,7 @@ public class GameMenu {
     }
 
     /** mostra as opções possíveis do menu */
-    private void printMenu() {
+    public void printMenu() {
         System.out.println("Escolha o modo de jogo:");
         System.out.println("1. Modo Clássico");
         System.out.println("2. Modo Especial");

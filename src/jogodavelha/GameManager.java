@@ -34,7 +34,7 @@ public class GameManager {
     }
 
     /** define o nome dos jogadores */
-    private void definirJogadores() {
+    public void definirJogadores() {
         Console.clearScreen();
         nomeJogador1 = Console.lerNome("Nome do jogador 1 (X): ");
         nomeJogador2 = Console.lerNome("Nome do jogador 2 (O): ");
@@ -44,7 +44,7 @@ public class GameManager {
      * cria o tipo de jogo escolhido
      * @return qual a opção de jogo escolhida
      */
-    private JogoBase criarJogo() {
+    public JogoBase criarJogo() {
         GameMenu menu = new GameMenu();
 
         switch (menu.displayMenu()) {
@@ -61,7 +61,7 @@ public class GameManager {
      * verifica se os jogadores querem jgar novamente
      * @return true se quiserem jogar novamente, se não false
      */
-    private boolean verificarJogarNovamente() {
+    public boolean verificarJogarNovamente() {
         System.out.println("Deseja jogar novamente? (0. Sim / 1. Não)");
         boolean resposta = Console.lerBoolean("Escolher: ");
         
@@ -69,7 +69,7 @@ public class GameManager {
     }
 
     /** mostra o nome e a quantidade de pontos dos players */
-    private void mostrarPontuacao() {
+    public void mostrarPontuacao() {
         try {
             System.out.println("Pontuação:");
             System.out.println(nomeJogador1 + ": " + gerenciaJogadores.obterVitorias(nomeJogador1) + " vitórias");

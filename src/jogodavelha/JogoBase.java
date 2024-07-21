@@ -7,11 +7,10 @@ import java.io.IOException;
 /** classe que possui a lógica geral do jogo */
 public abstract class JogoBase {
     protected Tabuleiro tabuleiro;
-    protected Jogador jogador1;
-    protected Jogador jogador2;
-    protected Jogador jogadorAtual;
-    protected Jogada jogada;
-    protected GerenciaJogadores gerenciaJogadores;
+    private Jogador jogador1;
+    private Jogador jogador2;
+    private Jogador jogadorAtual;
+    private GerenciaJogadores gerenciaJogadores;
 
     /**
      * construtor que realiza a escolha de nomes do jogador
@@ -60,7 +59,7 @@ public abstract class JogoBase {
     }
 
     /** alterna o turno entre os jogadores */
-    private void alternarTurno() {
+    public void alternarTurno() {
         jogadorAtual = (jogadorAtual == jogador1) ? jogador2 : jogador1;
     }
 

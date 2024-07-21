@@ -25,7 +25,7 @@ public class JogoEspecial extends JogoBase {
      * @param jogador jogador que fará a jogada atual
      */
     @Override
-    protected void realizarJogada(Jogador jogador) {
+    public void realizarJogada(Jogador jogador) {
         boolean jogadaValida = false;
         while (!jogadaValida) {
             int linha = Console.lerJogada("Linha da jogada (1-3): ");
