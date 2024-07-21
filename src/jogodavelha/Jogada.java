@@ -1,44 +1,40 @@
 package jogodavelha;
-/** classe que realiza jogada */
+
 public class Jogada {
     private int linha;
     private int coluna;
+    private String simbolo;
 
-    /** construtor da classe */
     public Jogada() {
+    }
+
+    public Jogada(int linha, int coluna, String simbolo) {
         this.linha = linha;
         this.coluna = coluna;
+        this.simbolo = simbolo;
     }
 
-    /**
-     * modifica a coluna da jogada
-     * @param coluna modifica a coluna para a jogada
-     */
-    public void setColuna(int coluna) {
-        this.coluna = coluna;
+    public int getLinha() {
+        return linha;
     }
 
-    /**
-     * retorna coluna da jogada
-     * @return coluna da jogada
-     */
-    public int getColuna() {
-        return coluna;
-    }
-
-    /**
-     * modifica a linha da jogada
-     * @param linha modifica a linha da jogada
-     */
     public void setLinha(int linha) {
         this.linha = linha;
     }
 
-    /**
-     * retorna a linha da jogada
-     * @return a linha da jogada
-     */
-    public int getLinha() {
-        return linha;
+    public int getColuna() {
+        return coluna;
+    }
+
+    public void setColuna(int coluna) {
+        this.coluna = coluna;
+    }
+
+    public String getSimbolo() {
+        return simbolo;
+    }
+
+    public void setSimbolo(String simbolo) {
+        this.simbolo = simbolo;
     }
 }

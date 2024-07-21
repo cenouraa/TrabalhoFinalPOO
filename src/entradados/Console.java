@@ -32,7 +32,13 @@ public class Console {
      * @return valor inteiro do termial
      */
     public static int lerInt() {
-        return scanner.nextInt();
+        try{
+            return Integer.parseInt(scanner.nextLine());
+        }
+        catch(NumberFormatException e){
+            System.out.println();
+            return 0;
+        }
     }
 
     /**
@@ -45,15 +51,8 @@ public class Console {
         return scanner.nextLine();
     }
 
-    /*public static int lerInt(String mensagem) {
-        System.out.print(mensagem);
-        while (!scanner.hasNextInt()) {
-            System.out.println("Por favor, digite um número inteiro válido.");
-            scanner.next();
-            System.out.print(mensagem);
-        }
-        int numero = scanner.nextInt();
-        scanner.nextLine();
-        return numero;
-    }*/
+    public static void clearScreen() {
+        System.out.print("\033[2J\033[H"); // Código ANSI para limpar a tela
+        System.out.flush();
+    }
 }
