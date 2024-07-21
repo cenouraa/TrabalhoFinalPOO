@@ -1,5 +1,6 @@
 package jogodavelha;
 
+/*classe que cuida da impressao do tabuleiro e da condição de vitória */
 public class Tabuleiro {
     private String[][] tabuleiro;
 
